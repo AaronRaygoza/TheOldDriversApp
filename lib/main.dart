@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prueba_2/page/home.dart';
+import 'package:prueba_2/page/music.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'The Old Drivers',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
-      home: const Home(),
-    );
+        title: 'The Old Drivers',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const Home(),
+          '/musica': (context) => const MusicTOD()
+        });
   }
 }
